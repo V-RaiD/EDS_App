@@ -77,7 +77,9 @@ public class ListActivityPage extends ActionBarActivity {
             try {
                 //add data
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);
-                nameValuePairs.add(new BasicNameValuePair("data", data[0]));
+                nameValuePairs.add(new BasicNameValuePair("eid", "100"));
+                nameValuePairs.add(new BasicNameValuePair("sid", "1"));
+                nameValuePairs.add(new BasicNameValuePair("lim", "10"));
                 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                 //execute http post
                 response = httpclient.execute(httppost);
